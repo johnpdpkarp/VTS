@@ -1,0 +1,15 @@
+./results/test/Sensor/getParameterUnits.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+getParameterUnits 3
+frames/sec
+
+getParameterUnits 3
+km
+
+Exit

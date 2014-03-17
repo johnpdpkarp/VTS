@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- 
+    FILENAME:   ThreadTest.xml
+    DESCRIPTION:
+      Used as configuration file for Thread Testing
+      XML Elements:
+        ThreadTest: root element
+        Model: names of plugin and sensor model
+	Test: 
+	   threads: # threads
+	   points: # test points per image
+	   runs: # test runs
+	   oneSMPerThread: one SM per thread option
+        image: ntf image (multiple "image" records can be used)
+	   ISDFileType: NITF_21_TYPE, NITF_20_TYPE, FILENAME_TYPE, or BYTESTREAM_TYPE
+                        (default FILENAME_TYPE)
+	   imageIndex: optional image index for NITF_21_TYPE and NITF_20_TYPE types
+    
+    NOTES:
+    SOFTWARE HISTORY:
+      Date          Author  Comment
+      03-May-2011   DSL     Initial
+      06-Jan-2012   DSL     added ISD file types NITF_21_TYPE, NITF_20_TYPE, 
+                                                 FILENAME_TYPE ,BYTESTREAM_TYPE
+-->
+
+<ThreadTest>
+  <Model PluginName="ExamplePlugin" SensorModelName="EXAMPLE_SENSOR_MODEL"></Model>
+  <Test threads="2" points="20" runs ="5" oneSMPerThread="false">
+	  <image ISDFileType="NITF_21_TYPE" imageIndex="1">data/GHSarNITF21_good.ntf</image>
+	  <image ISDFileType="NITF_21_TYPE">data/GHSarNITF21_good.ntf</image>
+	  <image ISDFileType="NITF_20_TYPE" imageIndex="2">data/GHSarNITF20_good.ntf</image>
+	  <image ISDFileType="FILENAME_TYPE">data/GHSarNITF21_good.ntf</image>
+	  <image ISDFileType="BYTESTREAM_TYPE">data/GHSarNITF21_good.ntf</image>
+	  <image>data/GHSarNITF20_good.ntf</image>
+  </Test>
+</ThreadTest>

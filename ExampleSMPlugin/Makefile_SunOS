@@ -1,0 +1,79 @@
+###############################################################################
+#
+#     FILENAME:   Makefile_SunOS
+#
+#     DESCRIPTION:
+#
+#     This Makefile is used by make to build the vts ExampleSMPlugin plugin 
+#     (shared object) on Solaris using the WorkShop/Forte CC compiler.
+#
+#     NOTES:
+#
+###############################################################################
+
+CXX = CC
+
+VTSPROJDIR = ..
+CSMINCDIR = $(VTSPROJDIR)/CSM_include
+
+OBJDIR = $(VTSPROJDIR)/ExampleSMPlugin/object
+
+LIBPATH = ExampleSMPlugin/library
+LIBDIR = $(VTSPROJDIR)/$(LIBPATH)
+LNKLIBDIR = ./$(LIBPATH)
+
+# The flags needed to compile all
+CXXFLAGS =	-PIC -g
+
+# we need to link in the dll handling library
+
+LDLIBS =	-ldl -lCstd
+
+#------------------------------------------------------------------------------
+all : $(LIBDIR)/ExampleSMPlugin.so
+	(cd $(VTSPROJDIR);rm -f ExampleSMPlugin.so; \
+	ln -s $(LNKLIBDIR)/ExampleSMPlugin.so .)
+
+#------------------------------------------------------------------------------
+# "copy" is the same as "all" except the actual ".so" is copied to the
+#        top-level directory instead of generating a link.
+
+copy : $(LIBDIR)/ExampleSMPlugin.so
+	(cd $(VTSPROJDIR);rm -f ExampleSMPlugin.so; \
+	cp $(LNKLIBDIR)/ExampleSMPlugin.so .)
+
+#------------------------------------------------------------------------------
+$(LIBDIR)/ExampleSMPlugin.so : $(OBJDIR)/ExampleSMPlugin.o \
+	$(OBJDIR)/ExampleSensorModel.o
+	$(CXX)  -G $(CXXFLAGS)   $(OBJDIR)/ExampleSMPlugin.o \
+	$(OBJDIR)/ExampleSensorModel.o \
+	-o $(LIBDIR)/ExampleSMPlugin.so
+
+#------------------------------------------------------------------------------
+$(OBJDIR)/ExampleSMPlugin.o : ExampleSMPlugin.cpp \
+	Makefile_SunOS \
+	ExampleSMPlugin.h \
+	ExampleSensorModel.h \
+	$(CSMINCDIR)/CSMPlugin.h \
+	$(CSMINCDIR)/CSMError.h \
+	$(CSMINCDIR)/CSMWarning.h \
+	$(CSMINCDIR)/CSMMisc.h
+	$(CXX) -c -PIC -g $(TSTAPIVER) -I$(CSMINCDIR) ExampleSMPlugin.cpp \
+               -o $(OBJDIR)/ExampleSMPlugin.o
+
+#------------------------------------------------------------------------------
+$(OBJDIR)/ExampleSensorModel.o : ExampleSensorModel.cpp \
+	Makefile_SunOS \
+	ExampleSensorModel.h \
+	$(CSMINCDIR)/CSMSensorModel.h \
+	$(CSMINCDIR)/CSMError.h \
+	$(CSMINCDIR)/CSMWarning.h
+	$(CXX) -c -PIC -g $(TSTAPIVER) -I$(CSMINCDIR) ExampleSensorModel.cpp \
+               -o $(OBJDIR)/ExampleSensorModel.o
+
+#------------------------------------------------------------------------------
+clean :
+	-rm -f $(OBJDIR)/*.o vts $(LIBDIR)/*.so \
+             $(VTSPROJDIR)/ExampleSMPlugin.so *~
+	-rm -rf SunWS_cache
+

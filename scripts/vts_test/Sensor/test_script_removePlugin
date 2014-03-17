@@ -1,0 +1,17 @@
+./results/test/Sensor/removePlugin.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+getList
+
+removePlugin ExamplePlugin
+
+getList
+
+removePlugin abcPlugin
+
+getList
+
+Exit

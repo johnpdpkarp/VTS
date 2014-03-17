@@ -1,0 +1,44 @@
+###############################################################################
+#
+#     FILENAME:   Makefile_Linux
+#
+#     DESCRIPTION:
+#
+#     This Makefile is used by make to build CSMPlugin.o file
+#     on Solaris using the gcc compiler.
+#
+#     NOTES:
+#
+###############################################################################
+
+CXX = g++ 
+
+VTSPROJDIR = ..
+
+CSMINCDIR = $(VTSPROJDIR)/CSM_include
+OBJDIR = $(VTSPROJDIR)/CSM/object_gcc
+
+# The flags needed to compile all
+CXXFLAGS = -g -Wall
+CSHAREDFLAGS = -shared
+
+# we need to link in the dll handling library
+
+LDLIBS =	-ldl
+
+#------------------------------------------------------------------------------
+all : $(OBJDIR)/CSMPlugin.o
+
+$(OBJDIR)/CSMPlugin.o    : CSMPlugin.cpp \
+	Makefile_Linux \
+	$(CSMINCDIR)/CSMError.h \
+	$(CSMINCDIR)/CSMWarning.h \
+	$(CSMINCDIR)/CSMMisc.h \
+	$(CSMINCDIR)/CSMPlugin.h
+	$(CXX) -c -g $(TSTAPIVER) -I$(CSMINCDIR) CSMPlugin.cpp -o $(OBJDIR)/CSMPlugin.o
+
+#------------------------------------------------------------------------------
+clean :
+	-rm -f $(OBJDIR)/*.o vts *.so *~
+	-rm -rf SunWS_cache
+

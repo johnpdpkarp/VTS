@@ -1,0 +1,216 @@
+./results/test/Sensor/vtsRepeat.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+imageToGround1 11.0 22.0 33.0 .44 -c 5.0 -+ 0
+5.0 6.0 7.0 8.0 0 0
+No_Error
+
+vtsRepeat 100
+imageToGround1 11.0 22.0 33.0 .44 -c 5.0 -+ 0
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+5.0 6.0 7.0 8.0 0 0
+No_Error
+
+
+Exit

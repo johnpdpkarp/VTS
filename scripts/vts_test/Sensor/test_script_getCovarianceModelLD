@@ -1,0 +1,59 @@
+./results/test/Sensor/getCovarianceModelLD.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD EXAMPLE_SENSOR_MODEL ExamplePlugin
+
+constructModelFromISD EXAMPLE_SENSOR_MODEL
+
+getCovarianceModel
+
+#
+vtsWriteCommentToLogFile C The following test: num=3
+getNumSensorModelParameters
+
+vtsWriteCommentToLogFile C The following test: num=2
+getNumCorrelationParameterGroups
+
+#
+vtsWriteCommentToLogFile C The following test: grIndex=1
+getCorrelationParameterGroup 2
+
+setCorrelationParameterGroup 2 0
+
+vtsWriteCommentToLogFile C The following test: grIndex=0
+getCorrelationParameterGroup 2
+
+#
+#
+vtsWriteCommentToLogFile C The following test will have no values for theInitialCorrsPerSegment and theTimesPerSegment
+getCorrelationGroupParameters 0
+
+setCorrelationGroupParameters 0 .3 .2 .4 .5
+vtsWriteCommentToLogFile C The following test: theInitialCorrsPerSegment=0.3,0.2 theTimesPerSegment=0.4,0.5
+getCorrelationGroupParameters 0
+
+vtsWriteCommentToLogFile C The following test: coeff=0.2
+getCorrelationCoefficient 0 1.5
+
+
+#
+setCorrelationGroupParameters 0 .4 .3 .5 .6
+vtsWriteCommentToLogFile C The following test: theInitialCorrsPerSegment=0.4,0.3 theTimesPerSegment=0.5,0.6
+getCorrelationGroupParameters 0
+
+vtsWriteCommentToLogFile C The following test: coeff=0.3
+getCorrelationCoefficient 0 1.5
+
+
+vtsWriteCommentToLogFile C Each of the following tests gets an "Index out of Range" error 
+getCorrelationParameterGroup 11
+getCorrelationCoefficient 11 1.5
+getCorrelationGroupParameters 11
+setCorrelationParameterGroup 11 0
+setCorrelationParameterGroup 0 11
+setCorrelationGroupParameters 11 .1 .2 .3 .4
+
+Exit
+
+

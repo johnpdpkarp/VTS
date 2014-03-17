@@ -1,0 +1,12 @@
+./results/test/Sensor/vtsReadFileName.csv
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+vtsReadFilename Junk_file_that_dose_not_exist
+
+vtsReadFilename data/GHSarNITF20_good.ntf
+
+vtsDumpISD
+
+Exit

@@ -1,0 +1,12 @@
+./results/test/Sensor/getImageStart.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+getImageStart
+45 46
+
+Exit

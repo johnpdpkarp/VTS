@@ -1,0 +1,15 @@
+./results/test/Sensor/getGeometricCorrectionSwitch.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+getGeometricCorrectionSwitch 3
+1
+
+getGeometricCorrectionSwitch 3
+0
+
+Exit

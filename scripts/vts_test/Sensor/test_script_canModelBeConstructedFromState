@@ -1,0 +1,21 @@
+./results/test/Sensor/canModelBeConstructedFromState.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+getModelName1 0
+
+convertISDToModelState STUB_SENSOR_MODEL
+
+# Following command should Pass
+canModelBeConstructedFromState STUB_SENSOR_MODEL
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+# Following command should Fail
+canModelBeConstructedFromState UnknownSensorModel
+
+Exit
+

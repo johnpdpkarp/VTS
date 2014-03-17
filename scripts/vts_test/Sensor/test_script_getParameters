@@ -1,0 +1,36 @@
+./results/test/Sensor/getParameters.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+# after the command, the stub reads the number of parameters
+# then the parameter type to choose from(based on pSet),
+# then the parameters.
+getParameters
+2   # 2 params
+2   # REAL
+2   # REAL
+pname1 1.1 deg
+pname2 2.2 m
+
+getParameters FIXED
+3 # 2 params
+3 # EXACT
+2 # REAL  (will not be chosen)
+3 # EXACT
+pname3 3.3 watt
+pname4 4.4 lines/sec
+
+Exit
+
+
+
+getParameterSetIndices FIXED
+3
+3 # EXACT
+2 # REAL
+3 # EXACT
+

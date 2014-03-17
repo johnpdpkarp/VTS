@@ -1,0 +1,30 @@
+./results/test/Sensor/getParameterSetIndices.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+# after command, stub reads # of params, then type for each param
+getParameterSetIndices
+2   # 2 params
+2   # REAL
+2   # REAL
+
+getParameterSetIndices FIXED
+3
+3 # EXACT
+2 # REAL
+3 # EXACT
+
+getParameterSetIndices ADJUSTABLE
+6
+2 # REAL
+3 # EXACT
+2 # REAL
+1 # FICTITIOUS
+2 # REAL
+3 # EXACT
+
+Exit

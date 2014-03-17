@@ -1,0 +1,66 @@
+<project name="vts_gui" default="dist" basedir=".">
+    <description>
+        Build script for CSM GUI
+    </description>
+  <!-- set global properties for this build -->
+  <property name="src" location="src"/>
+  <property name="build" location="build"/>
+  <property name="dist"  location="dist"/>
+  <property name="Release_exe"  location="../Release"/>
+  <property name="Debug_exe"  location="../Debug"/>
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+  </target>
+
+  <target name="compile" depends="init"
+        description="compile the source " >
+    <!-- Compile the java code from ${src} into ${build} -->
+    <javac srcdir="${src}" destdir="${build}"/>
+  </target>
+
+  <target name="dist" depends="compile"
+        description="generate the distribution" >
+    <!-- Create the distribution directory -->
+    <mkdir dir="${dist}/lib"/>
+
+    <!-- Put everything in ${build} into the VTS_GUI-${DSTAMP}.jar file -->
+    <jar jarfile="${dist}/lib/vts_gui-{DSTAMP}.jar" 
+			basedir="${build}">
+			<manifest>
+				<attribute name="Main-Class" value="csm_gui"/>
+			</manifest>
+	</jar>
+	<!-- Place the jar in both the Release and Debug directories -->
+    <jar jarfile="${Release_exe}/vts_gui.jar" 
+		basedir="${build}">
+		<manifest>
+			<attribute name="Main-Class" value="csm_gui"/>
+		</manifest>				
+	</jar>
+    <jar jarfile="${Debug_exe}/vts_gui.jar" 
+		basedir="${build}">
+		<manifest>
+			<attribute name="Main-Class" value="csm_gui"/>
+		</manifest>
+	</jar>
+  </target>
+
+  <!-- copy the config.xml file over to both the Release and Debug directories -->
+  <copy file="./supportfiles/config.xml" tofile="${Release_exe}/config.xml" overwrite="true"/>
+  <copy file="./supportfiles/config.xml" tofile="${Debug_exe}/config.xml" overwrite="true"/>
+
+  <!-- copy the vts.bat file over to both the Release and Debug directories -->
+  <copy file="./supportfiles/run_vts.bat" tofile="${Release_exe}/run_vts.bat" overwrite="true"/>
+  <copy file="./supportfiles/run_vts.bat" tofile="${Debug_exe}/run_vts.bat" overwrite="true"/>
+
+  <target name="clean"
+        description="clean up" >
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${build}"/>
+    <delete dir="${dist}"/>
+  </target>
+</project>

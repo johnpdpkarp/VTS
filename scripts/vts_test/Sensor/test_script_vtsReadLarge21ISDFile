@@ -1,0 +1,9 @@
+./results/test/Sensor/vtsReadLarge21ISDFile.csv
+
+# Test for large (2G - 4G) file
+
+vtsToggleNitfDebug
+vtsRead21ISDFile ../../results10/nitfFiles/largeNITF21.ntf
+vtsRead21ISDFile ../../results10/nitfFiles/largeNITF21fromBAE.ntf
+
+Exit

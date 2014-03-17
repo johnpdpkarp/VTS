@@ -1,0 +1,15 @@
+./results/test/Sensor/isParameterShareable.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+isParameterShareable 3
+1
+
+isParameterShareable 3
+0
+
+Exit

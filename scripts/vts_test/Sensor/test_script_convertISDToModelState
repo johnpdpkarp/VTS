@@ -1,0 +1,23 @@
+./results/test/Sensor/convertISDToModelState.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+getModelName1 0
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+# The following command will fail
+convertISDToModelState UnknownSensorModel
+
+convertISDToModelState STUB_SENSOR_MODEL
+
+constructModelFromState SensorModelState
+
+imageToGround1 11.0 22.0 33.0 .44
+5.0 6.0 7.0 8.0 0 0
+No_Error
+
+Exit

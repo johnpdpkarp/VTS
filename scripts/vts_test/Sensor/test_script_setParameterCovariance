@@ -1,0 +1,11 @@
+./results/test/Sensor/setParameterCovariance.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+setParameterCovariance 3 4 5.6
+
+Exit

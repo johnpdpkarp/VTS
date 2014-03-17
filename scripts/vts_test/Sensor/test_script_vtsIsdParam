@@ -1,0 +1,26 @@
+./results/test/Sensor/vtsIsdParam.csv
+
+vtsRead21ISDFile data/GHSarNITF21_good.ntf
+
+vtsAddIsdParam IMAGE_ID newid1
+vtsAddIsdParam IMAGE_INDEX newImageIndex1
+vtsAddIsdParam LOGICAL_INDEX newLogicalIndex1
+vtsAddIsdParam MODEL_NAME newModelName1
+
+vtsAddIsdParam IMAGE_ID newid2
+vtsAddIsdParam IMAGE_INDEX newImageIndex2
+vtsAddIsdParam LOGICAL_INDEX newLogicalIndex2
+vtsAddIsdParam MODEL_NAME newModelName2
+
+vtsGetIsdParam IMAGE_ID 0
+vtsGetIsdParam IMAGE_INDEX 0
+vtsGetIsdParam LOGICAL_INDEX 0
+vtsGetIsdParam MODEL_NAME 0
+
+vtsGetIsdParam IMAGE_ID 1
+vtsGetIsdParam IMAGE_INDEX 1
+vtsGetIsdParam LOGICAL_INDEX 1
+vtsGetIsdParam MODEL_NAME 1
+
+exit
+

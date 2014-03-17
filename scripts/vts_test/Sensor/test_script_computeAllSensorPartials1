@@ -1,0 +1,238 @@
+./results/test/Sensor/computeAllSensorPartials1.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+vtsWriteCommentToLogFile C The following test uses entered values for pSet and desired_precision.
+computeAllSensorPartials1 41.0 42.0 43.0 FIXED .44
+6.1 6.2 6.3 0 0
+No_Error
+
+vtsWriteCommentToLogFile C The following test uses entered values for pSet and desired_precision.
+computeAllSensorPartials1 41.0 42.0 43.0 FIXED .44
+4.1 4.2 4.3 4.4 4.5 4.6 6.3 0 0
+No_Error
+
+computeAllSensorPartials1 41.0 42.0 43.0 FIXED .44
+4.1 4.2 4.3 4.4 4.5 4.6 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 33 33 33 33 33 33 33 33 33 40 6.3 0 0
+No_Error
+
+vtsWriteCommentToLogFile C The following test uses default values for pSet and desired_precision.
+computeAllSensorPartials1 41.0 42.0 43.0
+6.1 6.2 6.3 0 0
+No_Error
+
+vtsWriteCommentToLogFile C The following test uses entered pSet and default desired_precision.
+computeAllSensorPartials1 41.0 42.0 43.0 ADJUSTABLE
+6.1 6.2 6.3 0 0
+No_Error
+
+vtsWriteCommentToLogFile C The following test uses defaultentered pSet and entered desired_precision.
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 0 0
+No_Error
+
+computeAllSensorPartials1 41.0 42.0 43.0 -c 5.0 -+ 0
+6.1 6.2 6.3 0 0
+No_Error
+
+computeAllSensorPartials1 41.0 42.0 43.0 ADJUSTABLE -c 5.0 -+ 0
+6.1 6.2 6.3 0 0
+No_Error
+
+computeAllSensorPartials1 41.0 42.0 43.0 FIXED .44 -c 6.0 -+ .2
+6.1 6.2 6.3 0 0
+No_Error
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44 -c 6.0 -+ .2
+6.1 6.2 6.3 0 0
+No_Error
+
+vtsWriteCommentToLogFile C The following test uses the default value for desired_precision.
+computeAllSensorPartials1 41.0 42.0 43.0
+6.1 6.2 6.3 0 0
+No_Error
+
+vtsWriteCommentToLogFile C "This will test Warning: 1 is valid by API, 99 is out of range"
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 1 1
+Warning
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 1 2
+Warning
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 1 3
+Warning
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 1 4
+Warning
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 1 5
+Warning
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 1 6
+Warning
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 1 7
+Warning
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 1 99
+Warning
+
+vtsWriteCommentToLogFile C "This will test Error: 6&14 is valid by API, 99 is out of range"
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 2 1
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 2 2
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 2 3
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 2 4
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 2 5
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 2 6
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 2 7
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 2 8
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 2 9
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 2 10
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 2 11
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 2 12
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 2 13
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 2 14
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 2 15
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 2 16
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+computeAllSensorPartials1 41.0 42.0 43.0 .44
+6.1 6.2 6.3 2 99
+Error
+
+Exit

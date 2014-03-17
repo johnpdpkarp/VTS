@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CSMAPI", "CSM\CSM.vcproj", "{CDCFFE13-C999-4E56-A23F-8F3A11F4B287}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExampleSMPlugin", "ExampleSMPlugin\ExampleSMPlugin.vcproj", "{25238BD6-59FE-4A3D-9995-A7A749B4FD19}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CDCFFE13-C999-4E56-A23F-8F3A11F4B287} = {CDCFFE13-C999-4E56-A23F-8F3A11F4B287}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StubSMPlugin", "StubSMPlugin\StubSMPlugin.vcproj", "{1607D5CC-62C2-4EAF-A861-799825E7E9ED}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CDCFFE13-C999-4E56-A23F-8F3A11F4B287} = {CDCFFE13-C999-4E56-A23F-8F3A11F4B287}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vts", "VTS\vts.vcproj", "{C329505E-2C98-4A4E-AC09-A8C4C807B473}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CDCFFE13-C999-4E56-A23F-8F3A11F4B287} = {CDCFFE13-C999-4E56-A23F-8F3A11F4B287}
+		{1607D5CC-62C2-4EAF-A861-799825E7E9ED} = {1607D5CC-62C2-4EAF-A861-799825E7E9ED}
+		{25238BD6-59FE-4A3D-9995-A7A749B4FD19} = {25238BD6-59FE-4A3D-9995-A7A749B4FD19}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDCFFE13-C999-4E56-A23F-8F3A11F4B287}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CDCFFE13-C999-4E56-A23F-8F3A11F4B287}.Debug|Win32.Build.0 = Debug|Win32
+		{CDCFFE13-C999-4E56-A23F-8F3A11F4B287}.Release|Win32.ActiveCfg = Release|Win32
+		{CDCFFE13-C999-4E56-A23F-8F3A11F4B287}.Release|Win32.Build.0 = Release|Win32
+		{25238BD6-59FE-4A3D-9995-A7A749B4FD19}.Debug|Win32.ActiveCfg = Debug|Win32
+		{25238BD6-59FE-4A3D-9995-A7A749B4FD19}.Debug|Win32.Build.0 = Debug|Win32
+		{25238BD6-59FE-4A3D-9995-A7A749B4FD19}.Release|Win32.ActiveCfg = Release|Win32
+		{25238BD6-59FE-4A3D-9995-A7A749B4FD19}.Release|Win32.Build.0 = Release|Win32
+		{1607D5CC-62C2-4EAF-A861-799825E7E9ED}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1607D5CC-62C2-4EAF-A861-799825E7E9ED}.Debug|Win32.Build.0 = Debug|Win32
+		{1607D5CC-62C2-4EAF-A861-799825E7E9ED}.Release|Win32.ActiveCfg = Release|Win32
+		{1607D5CC-62C2-4EAF-A861-799825E7E9ED}.Release|Win32.Build.0 = Release|Win32
+		{C329505E-2C98-4A4E-AC09-A8C4C807B473}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C329505E-2C98-4A4E-AC09-A8C4C807B473}.Debug|Win32.Build.0 = Debug|Win32
+		{C329505E-2C98-4A4E-AC09-A8C4C807B473}.Release|Win32.ActiveCfg = Release|Win32
+		{C329505E-2C98-4A4E-AC09-A8C4C807B473}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

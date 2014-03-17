@@ -1,0 +1,29 @@
+./results/test/Sensor/vtsRead20ISDFile.csv
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+vtsRead20ISDFile Junk_file_that_dose_not_exist
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+vtsDumpISD
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+vtsDumpISD
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+vtsRead20ISDFile data/GHSarNITF20_bad.ntf
+
+vtsDumpISD
+
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+vtsRead20ISDFile data/GHSarNITF21_good.ntf
+
+vtsDumpISD
+
+Exit

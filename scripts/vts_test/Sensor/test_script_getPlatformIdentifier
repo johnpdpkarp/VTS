@@ -1,0 +1,18 @@
+./results/test/Sensor/getPlatformIdentifier.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+getPlatformIdentifier
+StubPlatformID
+
+getPlatformIdentifier -c StubPlatformID
+StubPlatformID
+
+getPlatformIdentifier -c BadStubPlatFormID 
+StubPlatformID
+
+Exit

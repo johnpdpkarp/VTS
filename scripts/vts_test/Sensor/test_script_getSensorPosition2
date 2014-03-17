@@ -1,0 +1,17 @@
+./results/test/Sensor/getSensorPosition2.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+getSensorPosition2 5.0
+1.0 2.0 3.0 0 0
+No_Error
+
+getSensorPosition2 5.0
+1.0 2.0 3.0 2 2
+Error
+
+Exit

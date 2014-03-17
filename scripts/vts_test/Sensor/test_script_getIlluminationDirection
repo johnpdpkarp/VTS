@@ -1,0 +1,17 @@
+./results/test/Sensor/getIlluminationDirection.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+getIlluminationDirection 11.0 22.0 33.0 .44
+55.0 66.0 .77 0 0
+No_Error
+
+getIlluminationDirection 11.0 22.0 33.0 .44
+55.0 66.0 .77 2 2
+Error
+
+Exit

@@ -1,0 +1,9 @@
+./results/test/Sensor/getCSMVersion.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+getCsmVersion
+
+Exit

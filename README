@@ -1,1 +1,29 @@
-VTS (Validation and Test Suite) is a tool used to validate the behavior of a particular CSM plugin with respect to the defined API.
+History:
+
+The source code in this directory was Transferred from General Dynamics (original developer)
+and was updated to CSM 3.0.1.  Because of a loss of the contract, it was picked up by the 
+SGC (IAI).  The version from GD was picked up by MSP (BAE) and modified from the original source
+in order to fix issues and was delievered on 09/20/2013.
+
+The build structure was then modified by IAI and consists of the following:
+
+1) VTS Build
+	a) Windows Visual Studio 2008 - open VTS_Build20008.sln
+	b) GUI Tool - run .\GUI\build.xml using Ant
+
+2) Other platforms still need to be looked at including releases for:
+	a) gcc
+	b) IRIX
+	c) Linux
+	d) SunOS
+	e) Other Runtimes for Windows (currently VS2010 and VS2012, VS2003 no longer supported)
+
+
+For a complete build in Visual Studio, open the corresponding solution file and perform the following:
+
+	a) Build both Debug and Release modes
+	b) From the command prompt, type buildGUI.bat
+
+This will create both Release and Debug solutions that can be run either from the 
+command line or the GUI.  If you wish to use the GUI, change directory to the 
+corresponding directory (Release or Debug) and type / select "run_vts.bat"

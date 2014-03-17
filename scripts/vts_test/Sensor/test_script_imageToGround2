@@ -1,0 +1,197 @@
+./results/test/Sensor/imageToGround2.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 0 0
+No_Error
+
+vtsWriteCommentToLogFile C The following test uses the default value for desired_precision.
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 0 0
+No_Error
+
+vtsWriteCommentToLogFile C "This will test Warning: 1,3&5 is valid by API, 99 is out of range"
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 1 1
+Warning
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 1 2
+Warning
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 1 3
+Warning
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 1 4
+Warning
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 1 5
+Warning
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 1 6
+Warning
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 1 7
+Warning
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a WARNING
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 1 99
+Warning
+
+vtsWriteCommentToLogFile C "This will test Error: 14 is valid by API, 99 is out of range"
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2 1
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2 2
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2 3
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2 4
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2 5
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2 6
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2 7
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2 8
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2 9
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2 10
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2 11
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2 12
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2 13
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2 14
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2 15
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2 16
+Error
+
+# Make a note in the log file that the next command will fail
+vtsWriteCommentToLogFile INFO The next command should result in a ERROR
+
+imageToGround2 55.0 66.0 1.0 2.0 3.0 4.0 77.0 5.0 .88
+3.0 4.0 5.0 6.0 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2 99
+Error
+
+Exit

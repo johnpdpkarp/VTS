@@ -1,0 +1,26 @@
+./results/test/Sensor/replaceModelState.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+# replaceModelState using entered text
+replaceModelState State_Value
+0 0
+NO ERROR
+
+# replaceModelState using last retrieved from getModelState
+getModelState 
+State_Value1
+replaceModelState
+0 0
+NO ERROR
+
+# replaceModelState error
+replaceModelState " "
+2 7
+ERROR
+
+Exit

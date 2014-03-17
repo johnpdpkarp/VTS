@@ -1,0 +1,18 @@
+./results/test/Sensor/getPedigree.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+getPedigree
+Pedigree
+
+getPedigree -c Pedigree
+Pedigree
+
+getPedigree -c PedigreE
+Pedigree
+
+Exit

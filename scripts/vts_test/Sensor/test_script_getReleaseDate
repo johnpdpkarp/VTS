@@ -1,0 +1,9 @@
+./results/test/Sensor/getReleaseDate.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+getReleaseDate
+
+Exit

@@ -1,0 +1,11 @@
+./results/test/Sensor/setParameterValue.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+setParameterValue 1 2.0 
+
+Exit

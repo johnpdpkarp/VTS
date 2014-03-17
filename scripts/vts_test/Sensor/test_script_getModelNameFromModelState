@@ -1,0 +1,15 @@
+./results/test/Sensor/getModelNameFromModelState.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+getModelName1 0
+
+convertISDToModelState STUB_SENSOR_MODEL
+
+getModelNameFromModelState This_is_the_Sensor_Model_State_for_the_Stub 
+
+Exit

@@ -1,0 +1,30 @@
+./results/test/Sensor/vtsTermEcho.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+vtsTermEcho 99
+
+computeGroundPartials 30.0 31.0 32.0 -c 5.0 -+ 0
+5.0 5.1 5.2 5.3 5.4 5.5 0 0
+
+vtsTermEcho 99
+
+vtsTermEcho 1
+
+computeGroundPartials 30.0 31.0 32.0 -c 5.0 -+ 0
+5.0 5.1 5.2 5.3 5.4 5.5 0 0
+
+vtsTermEcho 99
+
+vtsTermEcho 0
+
+computeGroundPartials 30.0 31.0 32.0 -c 5.0 -+ 0
+5.0 5.1 5.2 5.3 5.4 5.5 0 0
+
+vtsTermEcho 99
+
+Exit

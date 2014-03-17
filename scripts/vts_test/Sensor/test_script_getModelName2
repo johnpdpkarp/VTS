@@ -1,0 +1,18 @@
+./results/test/Sensor/getModelName2.csv
+
+vtsRead20ISDFile data/GHSarNITF20_good.ntf
+
+makeModelListFromISD STUB_SENSOR_MODEL StubPlugin
+
+constructModelFromISD STUB_SENSOR_MODEL
+
+getModelName2
+TheSMName
+
+getModelName2 -c TheSMName
+TheSMName
+
+getModelName2 -c NotTheSMName
+TheSMName
+
+Exit
